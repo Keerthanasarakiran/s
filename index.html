@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Soundscapes | Nostalgic Village Atmosphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kerala Soundscapes</h1>
+            <p class="subtitle">Relive the nostalgic sounds of village life</p>
+        </header>
+
+        <div class="village-map">
+            <div class="location tea-shop" data-sound="tea-shop">
+                <div class="tooltip">Tea Shop</div>
+            </div>
+            <div class="location paddy-field" data-sound="paddy-field">
+                <div class="tooltip">Paddy Fields</div>
+            </div>
+            <div class="location riverbank" data-sound="riverbank">
+                <div class="tooltip">Riverbank</div>
+            </div>
+            <div class="location temple" data-sound="temple">
+                <div class="tooltip">Temple</div>
+            </div>
+        </div>
+
+        <div class="sound-controls">
+            <div class="sound-mixer">
+                <h2>Sound Mixer</h2>
+                <div class="slider-container">
+                    <label for="nature-volume">Nature Sounds</label>
+                    <input type="range" id="nature-volume" min="0" max="1" step="0.1" value="0.5">
+                </div>
+                <div class="slider-container">
+                    <label for="music-volume">Music Volume</label>
+                    <input type="range" id="music-volume" min="0" max="1" step="0.1" value="0.5">
+                </div>
+            </div>
+
+            <div class="time-controls">
+                <h2>Time of Day</h2>
+                <div class="time-buttons">
+                    <button class="time-btn" data-time="morning">Morning</button>
+                    <button class="time-btn" data-time="afternoon">Afternoon</button>
+                    <button class="time-btn" data-time="evening">Evening</button>
+                    <button class="time-btn" data-time="night">Night</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="now-playing">
+            <h3>Now Playing</h3>
+            <p class="current-sound">Click on a location to begin</p>
+            <p class="current-time">Morning</p>
+        </div>
+    </div>
+
+    <audio id="ambient-sound" loop></audio>
+    <audio id="background-music" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
